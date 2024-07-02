@@ -1,0 +1,187 @@
+:root {
+	--primary: #393e3e;
+	--secondary: #145c72;
+	--secondary-light: #00a0d1;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+html {
+	font-size: 62.5%;
+	font-family: sans-serif;
+}
+
+body {
+	font-size: 1.6rem;
+}
+
+/* Header */
+.background {
+	background-image: url(background.png);
+	height: 100vh;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+.container {
+	width: 90%;
+	height: 100vh;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	position: absolute;
+	top: 0;
+	left: 0;
+	gap: 2rem;
+}
+
+.box {
+	height: 50rem;
+	width: 80%;
+	background-color: var(--primary);
+	border: 0.5rem solid var(--secondary);
+	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+	border-radius: 3.5rem;
+}
+
+.calculate-form {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	gap: 1.5rem;
+	padding: 2rem;
+	place-items: center;
+	place-content: center;
+	max-width: auto;
+	margin: auto;
+}
+
+input {
+	height: 4.4rem;
+	width: 30rem;
+	padding: 0 2rem;
+	border-radius: 0.5rem;
+	background-color: transparent;
+	border: white 1px solid;
+	color: white;
+	font-size: 1.6rem;
+	max-width: 30rem;
+}
+
+input::placeholder {
+	color: white;
+	font-size: 1.6rem;
+}
+
+input:hover,
+input:focus-visible {
+	outline: 2px solid var(--secondary);
+	border: 2px solid var(--secondary);
+}
+
+.primybtn {
+	font-size: 2.4rem;
+	width: 16rem;
+	padding: 1rem 2rem;
+	border-radius: 1rem;
+	background-color: var(--secondary);
+	color: white;
+	border: none;
+}
+
+.primybtn:hover {
+	opacity: 0.9;
+}
+
+.primybtn:active {
+	opacity: 1;
+	background-color: var(--secondary-light);
+}
+
+.result {
+	color: white;
+	text-align: center;
+	font-size: 2rem;
+}
+
+.content {
+	color: var(--primary);
+	text-align: center;
+}
+
+.content h2 {
+	font-size: 6.4rem;
+	font-weight: 500;
+	line-height: 80%;
+}
+
+.content h1 {
+	font-size: 9.6rem;
+	font-weight: 600;
+	line-height: 90%;
+}
+
+
+
+
+
+/* Responsive Styles */
+@media (min-width: 1200px) {
+	.primybtn{
+		justify-content: center;
+		align-items: center;
+		position: absolute;
+		top: 45%;
+	}
+}
+@media (max-width: 1400px) {
+	.container {
+		width: 100%;
+	}
+
+	.box {
+		width: 90%;
+		height: 54rem;
+	}
+}
+
+@media (max-width: 786px) {
+	.container {
+		width: 100%;
+	}
+
+	.box {
+		width: 90%;
+		height: 54rem;
+	}
+
+	.calculate-form {
+		grid-template-columns: 1fr;
+		gap: 3rem;
+	}
+
+	.calculate-form button {
+		grid-column: 1/2;
+	}
+
+	.content h1 {
+		font-size: 5rem;
+	}
+
+	.content h2 {
+		font-size: 3.5rem;
+	}
+
+	input {
+		max-width: 100%;
+	}
+
+	.result {
+		font-size: 1.6rem;
+		padding: 2rem;
+	}
+}
